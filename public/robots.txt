@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://loyalty.vr-arena.games/sitemap-index.xml

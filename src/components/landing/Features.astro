@@ -1,0 +1,46 @@
+---
+import Section from '../ui/Section.astro';
+import Card from '../ui/Card.astro';
+import { getLangFromUrl, t } from '../../i18n';
+
+const lang = getLangFromUrl(Astro.url);
+
+const features = [
+  {
+    icon: '📱',
+    title: t(lang, 'features.customerApp.title'),
+    description: t(lang, 'features.customerApp.description'),
+  },
+  {
+    icon: '🎮',
+    title: t(lang, 'features.operatorApp.title'),
+    description: t(lang, 'features.operatorApp.description'),
+  },
+  {
+    icon: '📊',
+    title: t(lang, 'features.adminPanel.title'),
+    description: t(lang, 'features.adminPanel.description'),
+  },
+];
+---
+
+<Section id="features" elevated>
+  <div class="text-center mb-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-primary">
+      {t(lang, 'features.sectionTitle')}
+    </h2>
+    <p class="mt-4 text-lg text-text-muted max-w-2xl mx-auto">
+      {t(lang, 'features.sectionSubtitle')}
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+    {features.map((feature) => (
+      <Card class="text-center">
+        <div class="text-5xl mb-6">{feature.icon}</div>
+        <h3 class="text-xl font-bold text-primary mb-3">{feature.title}</h3>
+        <p class="text-text-muted leading-relaxed">{feature.description}</p>
+      </Card>
+    ))}
+  </div>
+</Section>

@@ -1,0 +1,110 @@
+{
+  "site": {
+    "title": "VRArena Loyalty — Plataforma de Fidelidade Gamificada para Negócios VR e LBE",
+    "description": "Transforme visitantes ocasionais em clientes fiéis. Sistema de fidelidade com gamificação, apps móveis, ferramentas para operadores e análises — aumento comprovado de 2.5x na frequência de visitas."
+  },
+  "nav": {
+    "features": "Funcionalidades",
+    "demo": "Demo",
+    "howItWorks": "Como Funciona",
+    "blog": "Blog",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "Transforme Visitantes Ocasionais em Clientes Fiéis",
+    "subtitle": "Plataforma de fidelidade com gamificação para arenas VR e centros de entretenimento. Pontos, sequências, títulos e rankings — mecânicas comprovadas que impulsionam visitas repetidas e receita.",
+    "cta": "Solicitar uma Demo",
+    "ctaSecondary": "Como Funciona"
+  },
+  "metrics": {
+    "sectionTitle": "Resultados Comprovados da Indústria LBE",
+    "sectionSubtitle": "Números que os principais centros de entretenimento alcançam com programas de fidelidade gamificados.",
+    "visits": {
+      "value": "2.5x",
+      "label": "Visitas Mais Frequentes",
+      "description": "Membros do programa visitam 2.5 vezes mais que clientes regulares"
+    },
+    "revenue": {
+      "value": "+15%",
+      "label": "Maior Ticket Médio",
+      "description": "Membros gastam 15% a mais por visita comparado a não membros"
+    },
+    "share": {
+      "value": "55%",
+      "label": "Receita de Membros",
+      "description": "Mais da metade da receita total vem dos participantes do programa"
+    },
+    "growth": {
+      "value": "26%",
+      "label": "Crescimento Anual do Mercado",
+      "description": "CAGR do mercado de gamificação — uma das tendências de maior crescimento"
+    }
+  },
+  "features": {
+    "sectionTitle": "Ecossistema Completo de Fidelidade",
+    "sectionSubtitle": "Tudo o que seu centro VR precisa para construir relacionamentos duradouros e aumentar visitas repetidas.",
+    "customerApp": {
+      "title": "App Móvel do Cliente",
+      "description": "App móvel com pontos, recompensas por sequências, títulos de conquistas, pesquisas gamificadas e ofertas personalizadas — mecânicas que trazem clientes de volta."
+    },
+    "operatorApp": {
+      "title": "App do Operador",
+      "description": "App simples para tablet — escaneamento de QR codes, gestão de visitas, aplicação de recompensas e atendimento rápido sem treinamento."
+    },
+    "adminPanel": {
+      "title": "Painel de Administração Web",
+      "description": "Painel analítico completo — segmentos de clientes, gestão de campanhas, regras de recompensas, padrões de visitas e controle multi-unidades em uma interface."
+    }
+  },
+  "demo": {
+    "sectionTitle": "Veja em Ação",
+    "sectionSubtitle": "Explore as interfaces que seus clientes e equipe usarão todos os dias."
+  },
+  "howItWorks": {
+    "sectionTitle": "Lance em Dias, Não em Meses",
+    "sectionSubtitle": "Quatro passos simples para transformar a retenção de clientes do seu centro.",
+    "steps": [
+      {
+        "title": "Configurar",
+        "description": "Configuramos suas regras de fidelidade, níveis de recompensas, branding e mecânicas de gamificação adaptadas ao seu centro."
+      },
+      {
+        "title": "Lançar",
+        "description": "O app do cliente é publicado na App Store e Google Play. Sua equipe recebe o app do operador."
+      },
+      {
+        "title": "Engajar",
+        "description": "Clientes ganham pontos, colecionam títulos, competem em rankings e desbloqueiam recompensas por sequências — impulsionando visitas repetidas."
+      },
+      {
+        "title": "Crescer",
+        "description": "Acompanhe resultados, descubra preferências dos clientes com pesquisas gamificadas e otimize campanhas com dados."
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Pronto para Crescer?",
+    "sectionSubtitle": "Obtenha uma demo personalizada e veja como a fidelidade gamificada transforma as métricas do seu negócio.",
+    "name": "Seu Nome",
+    "email": "Email",
+    "company": "Empresa / Centro",
+    "message": "Mensagem",
+    "submit": "Solicitar Demo",
+    "success": "Obrigado! Entraremos em contato em até 24 horas."
+  },
+  "footer": {
+    "description": "VRArena Loyalty é um produto da Portal Tech — soluções de fidelidade com gamificação para negócios VR e LBE em todo o mundo.",
+    "product": "Produto",
+    "company": "Empresa",
+    "about": "Sobre Nós",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "copyright": "© {year} Portal Tech. Todos os direitos reservados."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artigos sobre gamificação, fidelidade e estratégias de crescimento para negócios VR e LBE.",
+    "readMore": "Leia mais",
+    "backToBlog": "← Voltar ao blog"
+  }
+}

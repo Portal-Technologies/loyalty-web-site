@@ -1,0 +1,49 @@
+---
+import Section from '../ui/Section.astro';
+import { getLangFromUrl, t } from '../../i18n';
+import en from '../../i18n/en.json';
+import ru from '../../i18n/ru.json';
+import es from '../../i18n/es.json';
+import pt from '../../i18n/pt.json';
+import de from '../../i18n/de.json';
+import zh from '../../i18n/zh.json';
+
+const lang = getLangFromUrl(Astro.url);
+const translations = { en, ru, es, pt, de, zh } as const;
+const steps = translations[lang].howItWorks.steps;
+
+const stepIcons = ['⚙️', '🚀', '🎮', '📈'];
+---
+
+<Section id="how-it-works" elevated>
+  <div class="text-center mb-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-primary">
+      {t(lang, 'howItWorks.sectionTitle')}
+    </h2>
+    <p class="mt-4 text-lg text-text-muted max-w-2xl mx-auto">
+      {t(lang, 'howItWorks.sectionSubtitle')}
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    {steps.map((step, index) => (
+      <div class="relative text-center">
+        <!-- Step number -->
+        <div class="w-16 h-16 bg-(--gradient-hero) rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+          {stepIcons[index]}
+        </div>
+
+        <!-- Connector line (hidden on mobile and last item) -->
+        {index < steps.length - 1 && (
+          <div class="hidden lg:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-gradient-to-r from-cta/40 to-accent/40"></div>
+        )}
+
+        <div class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-cta/10 text-cta text-sm font-bold mb-3">
+          {index + 1}
+        </div>
+        <h3 class="text-lg font-bold text-primary mb-2">{step.title}</h3>
+        <p class="text-text-muted text-sm leading-relaxed">{step.description}</p>
+      </div>
+    ))}
+  </div>
+</Section>

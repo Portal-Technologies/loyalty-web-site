@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors from vr-arena.games — dark theme */
+  --color-primary: #ffffff;
+  --color-accent: #9b51e0;
+  --color-cta: #0693e3;
+  --color-cta-hover: #0580c7;
+  --color-russel: #E81134;
+
+  /* Dark backgrounds */
+  --color-bg-dark: #0a0a0a;
+  --color-bg-base: #0f0f14;
+  --color-bg-surface: #1a1a2e;
+  --color-bg-elevated: #222240;
+  --color-bg-light: #0f0f14;
+  --color-bg-muted: #141420;
+
+  /* Text */
+  --color-text: #e4e4e7;
+  --color-text-light: #ffffff;
+  --color-text-muted: #9ca3af;
+  --color-text-dim: #6b7280;
+
+  /* Borders */
+  --color-border: #2a2a3e;
+  --color-border-hover: #3a3a55;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, rgb(6, 147, 227) 0%, rgb(155, 81, 224) 100%);
+  --gradient-warm: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --section-padding: 5rem;
+  --container-max: 72rem;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-bg-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Pill button base */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -1,0 +1,22 @@
+---
+interface Props {
+  id?: string;
+  class?: string;
+  elevated?: boolean;
+}
+
+const { id, class: className = '', elevated = false } = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={[
+    'py-(--section-padding) px-4 sm:px-6 lg:px-8 text-text',
+    elevated ? 'bg-bg-muted' : 'bg-bg-base',
+    className,
+  ]}
+>
+  <div class="max-w-(--container-max) mx-auto">
+    <slot />
+  </div>
+</section>

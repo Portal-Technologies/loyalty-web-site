@@ -1,0 +1,33 @@
+---
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { href, variant = 'primary', size = 'md', class: className = '', ...rest } = Astro.props;
+
+const Tag = href ? 'a' : 'button';
+
+const variants = {
+  primary: 'bg-cta text-white hover:bg-cta-hover shadow-lg shadow-cta/25',
+  secondary: 'bg-bg-surface text-text-light border border-border hover:bg-bg-elevated',
+  outline: 'border-2 border-cta text-cta hover:bg-cta hover:text-white',
+};
+
+const sizes = {
+  sm: 'px-5 py-2 text-sm',
+  md: 'px-7 py-3 text-base',
+  lg: 'px-9 py-4 text-lg',
+};
+---
+
+<Tag
+  href={href}
+  class:list={['btn-pill', variants[variant], sizes[size], className]}
+  {...rest}
+>
+  <slot />
+</Tag>

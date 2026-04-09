@@ -1,0 +1,48 @@
+---
+import { getLangFromUrl, t, getLocalizedPath } from '../../i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const year = new Date().getFullYear().toString();
+---
+
+<footer class="bg-bg-dark text-text-light border-t border-border">
+  <div class="max-w-(--container-max) mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Brand -->
+      <div>
+        <a href={getLocalizedPath('/', lang)} class="text-xl font-bold">
+          <span class="bg-gradient-to-r from-cta to-accent bg-clip-text text-transparent">VRArena</span>
+          <span> Loyalty</span>
+        </a>
+        <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
+          {t(lang, 'footer.description')}
+        </p>
+      </div>
+
+      <!-- Product links -->
+      <div>
+        <h4 class="font-semibold mb-4">{t(lang, 'footer.product')}</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="#features" class="hover:text-white transition-colors">{t(lang, 'nav.features')}</a></li>
+          <li><a href="#demo" class="hover:text-white transition-colors">{t(lang, 'nav.demo')}</a></li>
+          <li><a href="#how-it-works" class="hover:text-white transition-colors">{t(lang, 'nav.howItWorks')}</a></li>
+          <li><a href={getLocalizedPath('/blog', lang)} class="hover:text-white transition-colors">{t(lang, 'nav.blog')}</a></li>
+        </ul>
+      </div>
+
+      <!-- Company links -->
+      <div>
+        <h4 class="font-semibold mb-4">{t(lang, 'footer.company')}</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="https://vr-arena.games" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">{t(lang, 'footer.about')}</a></li>
+          <li><a href={getLocalizedPath('/privacy', lang)} class="hover:text-white transition-colors">{t(lang, 'footer.privacy')}</a></li>
+          <li><a href={getLocalizedPath('/terms', lang)} class="hover:text-white transition-colors">{t(lang, 'footer.terms')}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+      {t(lang, 'footer.copyright', { year })}
+    </div>
+  </div>
+</footer>

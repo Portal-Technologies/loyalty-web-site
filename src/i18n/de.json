@@ -1,0 +1,110 @@
+{
+  "site": {
+    "title": "VRArena Loyalty — Gamifizierte Loyalty-Plattform für VR- und LBE-Unternehmen",
+    "description": "Verwandeln Sie Einmalbesucher in treue Stammkunden. Gamification-basiertes Loyalty-System mit mobilen Apps, Operator-Tools und Analytik — nachweislich 2,5-fache Besuchshäufigkeit."
+  },
+  "nav": {
+    "features": "Funktionen",
+    "demo": "Demo",
+    "howItWorks": "So funktioniert's",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Verwandeln Sie Einmalbesucher in treue Stammkunden",
+    "subtitle": "Gamification-basierte Loyalty-Plattform für VR-Arenen und Unterhaltungszentren. Punkte, Streaks, Titel und Bestenlisten — bewährte Mechaniken für mehr Wiederholungsbesuche und Umsatz.",
+    "cta": "Demo Anfragen",
+    "ctaSecondary": "So funktioniert's"
+  },
+  "metrics": {
+    "sectionTitle": "Bewährte Ergebnisse aus der LBE-Branche",
+    "sectionSubtitle": "Zahlen, die führende Unterhaltungsstätten mit gamifizierten Treueprogrammen erreichen.",
+    "visits": {
+      "value": "2.5x",
+      "label": "Häufigere Besuche",
+      "description": "Programmteilnehmer besuchen Standorte 2,5-mal häufiger als reguläre Kunden"
+    },
+    "revenue": {
+      "value": "+15%",
+      "label": "Höherer Durchschnittsbon",
+      "description": "Mitglieder geben pro Besuch 15% mehr aus als Nicht-Mitglieder"
+    },
+    "share": {
+      "value": "55%",
+      "label": "Umsatz von Mitgliedern",
+      "description": "Über die Hälfte des Gesamtumsatzes stammt von Treueprogramm-Teilnehmern"
+    },
+    "growth": {
+      "value": "26%",
+      "label": "Jährliches Marktwachstum",
+      "description": "CAGR des Gamification-Marktes — einer der am schnellsten wachsenden Business-Trends"
+    }
+  },
+  "features": {
+    "sectionTitle": "Komplettes Loyalty-Ökosystem",
+    "sectionSubtitle": "Alles, was Ihr VR-Standort braucht, um dauerhafte Kundenbeziehungen aufzubauen und Wiederholungsbesuche zu steigern.",
+    "customerApp": {
+      "title": "Kunden-App",
+      "description": "Mobile App mit Punkten, Streak-Belohnungen, Titeln, gamifizierten Umfragen und personalisierten Angeboten — Mechaniken, die Kunden zurückbringen."
+    },
+    "operatorApp": {
+      "title": "Operator-App",
+      "description": "Einfache Tablet-App — QR-Codes scannen, Check-ins verwalten, Prämien anwenden und Kunden schnell bedienen — ohne Schulung."
+    },
+    "adminPanel": {
+      "title": "Web-Admin-Panel",
+      "description": "Vollständiges Analyse-Dashboard — Kundensegmente, Kampagnenmanagement, Prämienregeln, Besuchsmuster und Multi-Standort-Verwaltung in einer Oberfläche."
+    }
+  },
+  "demo": {
+    "sectionTitle": "Sehen Sie es in Aktion",
+    "sectionSubtitle": "Entdecken Sie die Oberflächen, die Ihre Kunden und Ihr Team täglich nutzen werden."
+  },
+  "howItWorks": {
+    "sectionTitle": "Start in Tagen, nicht Monaten",
+    "sectionSubtitle": "Vier einfache Schritte zur Transformation Ihrer Kundenbindung.",
+    "steps": [
+      {
+        "title": "Konfigurieren",
+        "description": "Wir richten Ihre Treueregeln, Prämienstufen, Branding und Gamification-Mechaniken für Ihren Standort ein."
+      },
+      {
+        "title": "Starten",
+        "description": "Die Kunden-App geht im App Store und bei Google Play live. Ihr Team erhält die Operator-App."
+      },
+      {
+        "title": "Engagieren",
+        "description": "Kunden sammeln Punkte, Titel, konkurrieren in Bestenlisten und schalten Streak-Belohnungen frei — für mehr Wiederholungsbesuche."
+      },
+      {
+        "title": "Wachsen",
+        "description": "Verfolgen Sie Ergebnisse, entdecken Sie Kundenpräferenzen durch gamifizierte Umfragen und optimieren Sie Kampagnen datenbasiert."
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Bereit zu wachsen?",
+    "sectionSubtitle": "Erhalten Sie eine persönliche Demo und erfahren Sie, wie gamifizierte Loyalty Ihre Geschäftskennzahlen transformiert.",
+    "name": "Ihr Name",
+    "email": "E-Mail",
+    "company": "Unternehmen / Standort",
+    "message": "Nachricht",
+    "submit": "Demo anfragen",
+    "success": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden."
+  },
+  "footer": {
+    "description": "VRArena Loyalty ist ein Produkt von Portal Tech — gamifizierte Loyalty-Lösungen für VR- und LBE-Unternehmen weltweit.",
+    "product": "Produkt",
+    "company": "Unternehmen",
+    "about": "Über uns",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "copyright": "© {year} Portal Tech. Alle Rechte vorbehalten."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Einblicke zu Gamification, Kundenbindung und Wachstumsstrategien für VR- und LBE-Unternehmen.",
+    "readMore": "Weiterlesen",
+    "backToBlog": "← Zurück zum Blog"
+  }
+}

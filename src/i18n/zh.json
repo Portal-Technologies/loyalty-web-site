@@ -1,0 +1,110 @@
+{
+  "site": {
+    "title": "VRArena Loyalty — VR与LBE企业游戏化忠诚度平台",
+    "description": "将一次性访客转化为忠实常客。基于游戏化的忠诚度系统，配备移动应用、运营工具和数据分析——已证实可将访问频率提高2.5倍。"
+  },
+  "nav": {
+    "features": "功能",
+    "demo": "演示",
+    "howItWorks": "如何运作",
+    "blog": "博客",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "title": "将一次性访客转化为忠实常客",
+    "subtitle": "为VR场馆和线下娱乐中心打造的游戏化忠诚度平台。积分、连续签到、头衔和排行榜——经过验证的机制，推动重复访问和收入增长。",
+    "cta": "申请演示",
+    "ctaSecondary": "了解运作方式"
+  },
+  "metrics": {
+    "sectionTitle": "LBE行业验证的成果",
+    "sectionSubtitle": "领先娱乐场所通过游戏化忠诚度计划实现的数据。",
+    "visits": {
+      "value": "2.5x",
+      "label": "更高访问频率",
+      "description": "忠诚度会员的访问频率是普通客户的2.5倍"
+    },
+    "revenue": {
+      "value": "+15%",
+      "label": "更高客单价",
+      "description": "会员每次访问的消费比非会员高15%"
+    },
+    "share": {
+      "value": "55%",
+      "label": "会员贡献收入",
+      "description": "超过一半的总收入来自忠诚度计划参与者"
+    },
+    "growth": {
+      "value": "26%",
+      "label": "年市场增长率",
+      "description": "游戏化市场复合年增长率——商业领域增长最快的趋势之一"
+    }
+  },
+  "features": {
+    "sectionTitle": "完整的忠诚度生态系统",
+    "sectionSubtitle": "您的VR场馆建立持久客户关系和推动重复消费所需的一切。",
+    "customerApp": {
+      "title": "客户移动应用",
+      "description": "移动应用，包含积分、连续签到奖励、成就头衔、游戏化问卷和个性化优惠——让客户持续回访的机制。"
+    },
+    "operatorApp": {
+      "title": "操作员应用",
+      "description": "简洁的平板应用——扫描QR码、管理签到、应用奖励、快速服务客户——无需培训。"
+    },
+    "adminPanel": {
+      "title": "网页管理后台",
+      "description": "完整分析面板——客户分群、活动管理、奖励规则、访问模式和多门店统一管理。"
+    }
+  },
+  "demo": {
+    "sectionTitle": "实际效果展示",
+    "sectionSubtitle": "探索您的客户和团队每天将使用的界面。"
+  },
+  "howItWorks": {
+    "sectionTitle": "数日上线，而非数月",
+    "sectionSubtitle": "四个简单步骤，转变您场馆的客户留存。",
+    "steps": [
+      {
+        "title": "配置",
+        "description": "我们为您的场馆定制忠诚度规则、奖励等级、品牌形象和游戏化机制。"
+      },
+      {
+        "title": "上线",
+        "description": "客户应用在App Store和Google Play上线。员工获得操作员应用。"
+      },
+      {
+        "title": "互动",
+        "description": "客户赚取积分、收集头衔、参与排行榜竞争并解锁连续签到奖励——推动重复访问。"
+      },
+      {
+        "title": "增长",
+        "description": "追踪业绩、通过游戏化问卷了解客户偏好，并基于数据优化营销活动。"
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "准备好增长了吗？",
+    "sectionSubtitle": "获取个性化演示，了解游戏化忠诚度如何转变您的业务指标。",
+    "name": "您的姓名",
+    "email": "电子邮箱",
+    "company": "公司 / 场馆",
+    "message": "留言",
+    "submit": "申请演示",
+    "success": "谢谢！我们将在24小时内与您联系。"
+  },
+  "footer": {
+    "description": "VRArena Loyalty是Portal Tech的产品——为全球VR和LBE企业提供游戏化忠诚度解决方案。",
+    "product": "产品",
+    "company": "公司",
+    "about": "关于我们",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "copyright": "© {year} Portal Tech. 保留所有权利。"
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "关于游戏化、客户忠诚度和VR与LBE企业增长策略的洞察。",
+    "readMore": "阅读更多",
+    "backToBlog": "← 返回博客"
+  }
+}

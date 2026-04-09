@@ -1,0 +1,110 @@
+{
+  "site": {
+    "title": "VRArena Loyalty — Gamified Loyalty Platform for VR & LBE Business",
+    "description": "Turn one-time visitors into loyal regulars. Gamification-powered loyalty system with mobile apps, operator tools, and analytics — proven to increase visit frequency by 2.5x."
+  },
+  "nav": {
+    "features": "Features",
+    "demo": "Demo",
+    "howItWorks": "How It Works",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Turn One-Time Visitors into Loyal Regulars",
+    "subtitle": "Gamification-powered loyalty platform for VR arenas and LBE venues. Points, streaks, titles, and leaderboards — proven mechanics that drive repeat visits and grow your revenue.",
+    "cta": "Request a Demo",
+    "ctaSecondary": "See How It Works"
+  },
+  "metrics": {
+    "sectionTitle": "Proven Results from the LBE Industry",
+    "sectionSubtitle": "Numbers that leading entertainment venues achieve with gamified loyalty programs.",
+    "visits": {
+      "value": "2.5x",
+      "label": "More Frequent Visits",
+      "description": "Loyalty members visit 2.5 times more often than regular customers"
+    },
+    "revenue": {
+      "value": "+15%",
+      "label": "Higher Average Check",
+      "description": "Members spend 15% more per visit compared to non-members"
+    },
+    "share": {
+      "value": "55%",
+      "label": "Revenue from Members",
+      "description": "Over half of total revenue comes from loyalty program participants"
+    },
+    "growth": {
+      "value": "26%",
+      "label": "Annual Market Growth",
+      "description": "Gamification market CAGR — one of the fastest-growing trends in business"
+    }
+  },
+  "features": {
+    "sectionTitle": "Complete Loyalty Ecosystem",
+    "sectionSubtitle": "Everything your VR venue needs to build lasting customer relationships and drive repeat business.",
+    "customerApp": {
+      "title": "Customer Mobile App",
+      "description": "Mobile app with points, streak rewards, achievement titles, gamified surveys, and personalized offers — mechanics that keep customers coming back."
+    },
+    "operatorApp": {
+      "title": "Operator App",
+      "description": "Simple tablet app for your staff to scan QR codes, manage check-ins, apply rewards, and serve customers faster — no training needed."
+    },
+    "adminPanel": {
+      "title": "Web Admin Panel",
+      "description": "Full analytics dashboard — customer segments, campaign management, reward rules, visit patterns, and multi-location control from a single interface."
+    }
+  },
+  "demo": {
+    "sectionTitle": "See It in Action",
+    "sectionSubtitle": "Explore the interfaces your customers and team will use every day."
+  },
+  "howItWorks": {
+    "sectionTitle": "Launch in Days, Not Months",
+    "sectionSubtitle": "Four simple steps to transform your venue's customer retention.",
+    "steps": [
+      {
+        "title": "Configure",
+        "description": "We set up your loyalty rules, reward tiers, branding, and gamification mechanics tailored to your venue."
+      },
+      {
+        "title": "Launch",
+        "description": "The customer app goes live on App Store and Google Play. Staff gets the operator app."
+      },
+      {
+        "title": "Engage",
+        "description": "Customers earn points, collect titles, compete on leaderboards, and unlock streak rewards — driving repeat visits."
+      },
+      {
+        "title": "Grow",
+        "description": "Track performance, discover customer preferences through gamified surveys, and optimize campaigns with data-driven insights."
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Ready to Grow Your Venue?",
+    "sectionSubtitle": "Get a personalized demo and see how gamified loyalty can transform your business metrics.",
+    "name": "Your Name",
+    "email": "Email",
+    "company": "Company / Venue",
+    "message": "Message",
+    "submit": "Request a Demo",
+    "success": "Thank you! We'll get back to you within 24 hours."
+  },
+  "footer": {
+    "description": "VRArena Loyalty is a product of Portal Tech — gamification-powered loyalty solutions for VR and LBE businesses worldwide.",
+    "product": "Product",
+    "company": "Company",
+    "about": "About",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© {year} Portal Tech. All rights reserved."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights on gamification, customer loyalty, and growth strategies for VR & LBE businesses.",
+    "readMore": "Read more",
+    "backToBlog": "← Back to blog"
+  }
+}

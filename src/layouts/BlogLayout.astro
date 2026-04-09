@@ -1,0 +1,51 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { getLangFromUrl, t, getLocalizedPath } from '../i18n';
+
+interface Props {
+  title: string;
+  description?: string;
+  pubDate?: Date;
+  author?: string;
+}
+
+const lang = getLangFromUrl(Astro.url);
+const { title, description, pubDate, author } = Astro.props;
+---
+
+<BaseLayout title={`${title} — VRArena Loyalty Blog`} description={description}>
+  <article class="max-w-(--container-max) mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+    <a
+      href={getLocalizedPath('/blog', lang)}
+      class="text-cta hover:underline text-sm mb-8 inline-block"
+    >
+      {t(lang, 'blog.backToBlog')}
+    </a>
+
+    <header class="mb-10">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight">
+        {title}
+      </h1>
+      {
+        (pubDate || author) && (
+          <div class="mt-4 flex items-center gap-4 text-text-muted text-sm">
+            {pubDate && (
+              <time datetime={pubDate.toISOString()}>
+                {pubDate.toLocaleDateString(lang, {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </time>
+            )}
+            {author && <span>by {author}</span>}
+          </div>
+        )
+      }
+    </header>
+
+    <div class="prose prose-lg prose-invert max-w-none">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

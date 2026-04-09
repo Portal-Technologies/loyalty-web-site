@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/landing/Hero.astro';
+import Metrics from '../../components/landing/Metrics.astro';
+import Features from '../../components/landing/Features.astro';
+import ProductDemo from '../../components/landing/ProductDemo.astro';
+import HowItWorks from '../../components/landing/HowItWorks.astro';
+import ContactForm from '../../components/landing/ContactForm.astro';
+import { supportedLangs } from '../../i18n';
+
+export function getStaticPaths() {
+  return supportedLangs.map((lang) => ({ params: { lang } }));
+}
+---
+
+<BaseLayout>
+  <Hero />
+  <Metrics />
+  <Features />
+  <ProductDemo />
+  <HowItWorks />
+  <ContactForm />
+</BaseLayout>

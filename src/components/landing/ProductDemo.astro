@@ -1,0 +1,313 @@
+---
+import Section from '../ui/Section.astro';
+import { Image } from 'astro:assets';
+import { getLangFromUrl, t } from '../../i18n';
+
+const lang = getLangFromUrl(Astro.url);
+
+// Import all screenshots
+const clientAppImages = Object.values(
+  import.meta.glob<{ default: ImageMetadata }>('/src/assets/screenshots/client_app/*', { eager: true })
+).map(m => m.default);
+
+const adminAppImages = Object.values(
+  import.meta.glob<{ default: ImageMetadata }>('/src/assets/screenshots/admin_app/*', { eager: true })
+).map(m => m.default);
+
+const webAdminImages = Object.values(
+  import.meta.glob<{ default: ImageMetadata }>('/src/assets/screenshots/web_admin/*', { eager: true })
+).map(m => m.default);
+---
+
+<Section id="demo">
+  <div class="text-center mb-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-primary">
+      {t(lang, 'demo.sectionTitle')}
+    </h2>
+    <p class="mt-4 text-lg text-text-muted max-w-2xl mx-auto">
+      {t(lang, 'demo.sectionSubtitle')}
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Customer App -->
+    <div class="group">
+      <div class="carousel max-w-[280px] mx-auto" data-carousel>
+        <div class="overflow-hidden rounded-2xl border border-border group-hover:border-cta/50 transition-colors bg-bg-surface">
+          <div class="carousel-track flex transition-transform duration-300 ease-in-out">
+            {clientAppImages.map((img, i) => (
+              <div class="carousel-slide w-full flex-shrink-0 flex items-center justify-center cursor-zoom-in">
+                <Image
+                  src={img}
+                  alt={`Customer App screenshot ${i + 1}`}
+                  class="w-full h-auto object-contain"
+                  widths={[280, 560]}
+                  sizes="280px"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        {clientAppImages.length > 1 && (
+          <div class="flex items-center justify-center gap-3 mt-3">
+            <button class="carousel-prev w-7 h-7 rounded-full bg-bg-surface border border-border flex items-center justify-center text-text hover:bg-bg-muted transition-colors" aria-label="Previous">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <div class="carousel-dots flex gap-2">
+              {clientAppImages.map((_, i) => (
+                <button
+                  class:list={['w-2 h-2 rounded-full transition-colors', i === 0 ? 'bg-cta' : 'bg-border']}
+                  data-dot={i}
+                  aria-label={`Slide ${i + 1}`}
+                />
+              ))}
+            </div>
+            <button class="carousel-next w-7 h-7 rounded-full bg-bg-surface border border-border flex items-center justify-center text-text hover:bg-bg-muted transition-colors" aria-label="Next">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        )}
+      </div>
+      <p class="text-center mt-4 font-medium text-text">{t(lang, 'features.customerApp.title')}</p>
+    </div>
+
+    <!-- Operator App -->
+    <div class="group">
+      <div class="carousel max-w-[280px] mx-auto" data-carousel>
+        <div class="overflow-hidden rounded-2xl border border-border group-hover:border-accent/50 transition-colors bg-bg-surface">
+          <div class="carousel-track flex transition-transform duration-300 ease-in-out">
+            {adminAppImages.map((img, i) => (
+              <div class="carousel-slide w-full flex-shrink-0 flex items-center justify-center cursor-zoom-in">
+                <Image
+                  src={img}
+                  alt={`Operator App screenshot ${i + 1}`}
+                  class="w-full h-auto object-contain"
+                  widths={[280, 560]}
+                  sizes="280px"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        {adminAppImages.length > 1 && (
+          <div class="flex items-center justify-center gap-3 mt-3">
+            <button class="carousel-prev w-7 h-7 rounded-full bg-bg-surface border border-border flex items-center justify-center text-text hover:bg-bg-muted transition-colors" aria-label="Previous">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <div class="carousel-dots flex gap-2">
+              {adminAppImages.map((_, i) => (
+                <button
+                  class:list={['w-2 h-2 rounded-full transition-colors', i === 0 ? 'bg-cta' : 'bg-border']}
+                  data-dot={i}
+                  aria-label={`Slide ${i + 1}`}
+                />
+              ))}
+            </div>
+            <button class="carousel-next w-7 h-7 rounded-full bg-bg-surface border border-border flex items-center justify-center text-text hover:bg-bg-muted transition-colors" aria-label="Next">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        )}
+      </div>
+      <p class="text-center mt-4 font-medium text-text">{t(lang, 'features.operatorApp.title')}</p>
+    </div>
+
+    <!-- Web Admin -->
+    <div class="group">
+      <div class="carousel mx-auto" data-carousel>
+        <div class="overflow-hidden rounded-2xl border border-border group-hover:border-cta/50 transition-colors bg-bg-surface">
+          <div class="carousel-track flex transition-transform duration-300 ease-in-out">
+            {webAdminImages.map((img, i) => (
+              <div class="carousel-slide w-full flex-shrink-0 flex items-center justify-center cursor-zoom-in">
+                <Image
+                  src={img}
+                  alt={`Web Admin screenshot ${i + 1}`}
+                  class="w-full h-auto object-contain"
+                  widths={[400, 800]}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        {webAdminImages.length > 1 && (
+          <div class="flex items-center justify-center gap-3 mt-3">
+            <button class="carousel-prev w-7 h-7 rounded-full bg-bg-surface border border-border flex items-center justify-center text-text hover:bg-bg-muted transition-colors" aria-label="Previous">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <div class="carousel-dots flex gap-2">
+              {webAdminImages.map((_, i) => (
+                <button
+                  class:list={['w-2 h-2 rounded-full transition-colors', i === 0 ? 'bg-cta' : 'bg-border']}
+                  data-dot={i}
+                  aria-label={`Slide ${i + 1}`}
+                />
+              ))}
+            </div>
+            <button class="carousel-next w-7 h-7 rounded-full bg-bg-surface border border-border flex items-center justify-center text-text hover:bg-bg-muted transition-colors" aria-label="Next">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        )}
+      </div>
+      <p class="text-center mt-4 font-medium text-text">{t(lang, 'features.adminPanel.title')}</p>
+    </div>
+  </div>
+</Section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-sm">
+  <button id="lightbox-close" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10" aria-label="Close">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+  </button>
+
+  <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10" aria-label="Previous">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+  </button>
+
+  <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10" aria-label="Next">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+  </button>
+
+  <div class="flex flex-col items-center gap-4 max-h-[90vh] max-w-[90vw]">
+    <img id="lightbox-img" class="max-h-[80vh] max-w-[90vw] object-contain rounded-lg" src="" alt="" />
+    <div id="lightbox-counter" class="text-white/70 text-sm"></div>
+  </div>
+</div>
+
+<script>
+  // Carousel logic
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector('.carousel-track') as HTMLElement;
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('[data-dot]');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    let current = 0;
+    const total = slides.length;
+
+    function goTo(index: number) {
+      current = (index + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('bg-cta', i === current);
+        dot.classList.toggle('bg-border', i !== current);
+      });
+    }
+
+    prevBtn?.addEventListener('click', () => goTo(current - 1));
+    nextBtn?.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+    // Touch/swipe support
+    let startX = 0;
+    let dragging = false;
+
+    track.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      dragging = true;
+    });
+
+    track.addEventListener('touchend', (e) => {
+      if (!dragging) return;
+      dragging = false;
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        goTo(current + (diff > 0 ? 1 : -1));
+      }
+    });
+
+    // Click to open lightbox
+    slides.forEach((slide, i) => {
+      slide.addEventListener('click', () => {
+        const imgs = Array.from(carousel.querySelectorAll('.carousel-slide img')) as HTMLImageElement[];
+        const srcs = imgs.map(img => {
+          const srcset = img.getAttribute('srcset');
+          if (srcset) {
+            const parts = srcset.split(',').map(s => s.trim());
+            return parts[parts.length - 1].split(' ')[0];
+          }
+          return img.src;
+        });
+        const alts = imgs.map(img => img.alt);
+        openLightbox(srcs, alts, i);
+      });
+    });
+  });
+
+  // Lightbox logic
+  const lightbox = document.getElementById('lightbox')!;
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const lightboxCounter = document.getElementById('lightbox-counter')!;
+  const lightboxClose = document.getElementById('lightbox-close')!;
+  const lightboxPrev = document.getElementById('lightbox-prev')!;
+  const lightboxNext = document.getElementById('lightbox-next')!;
+
+  let lbSrcs: string[] = [];
+  let lbAlts: string[] = [];
+  let lbCurrent = 0;
+
+  function openLightbox(srcs: string[], alts: string[], index: number) {
+    lbSrcs = srcs;
+    lbAlts = alts;
+    lbCurrent = index;
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    showLightboxSlide();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  function showLightboxSlide() {
+    lightboxImg.src = lbSrcs[lbCurrent];
+    lightboxImg.alt = lbAlts[lbCurrent];
+    lightboxCounter.textContent = `${lbCurrent + 1} / ${lbSrcs.length}`;
+    lightboxPrev.classList.toggle('invisible', lbSrcs.length <= 1);
+    lightboxNext.classList.toggle('invisible', lbSrcs.length <= 1);
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxPrev.addEventListener('click', () => {
+    lbCurrent = (lbCurrent - 1 + lbSrcs.length) % lbSrcs.length;
+    showLightboxSlide();
+  });
+  lightboxNext.addEventListener('click', () => {
+    lbCurrent = (lbCurrent + 1) % lbSrcs.length;
+    showLightboxSlide();
+  });
+
+  // Close on backdrop click
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') {
+      lbCurrent = (lbCurrent - 1 + lbSrcs.length) % lbSrcs.length;
+      showLightboxSlide();
+    }
+    if (e.key === 'ArrowRight') {
+      lbCurrent = (lbCurrent + 1) % lbSrcs.length;
+      showLightboxSlide();
+    }
+  });
+
+  // Touch swipe in lightbox
+  let lbStartX = 0;
+  lightboxImg.addEventListener('touchstart', (e) => { lbStartX = e.touches[0].clientX; });
+  lightboxImg.addEventListener('touchend', (e) => {
+    const diff = lbStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      lbCurrent = (lbCurrent + (diff > 0 ? 1 : -1) + lbSrcs.length) % lbSrcs.length;
+      showLightboxSlide();
+    }
+  });
+</script>
