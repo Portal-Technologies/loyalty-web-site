@@ -19,8 +19,17 @@ const lang = getLangFromUrl(Astro.url);
 
     <form
       id="contact-form"
+      data-loaded-at={Date.now().toString()}
       class="bg-bg-surface rounded-2xl p-6 sm:p-10 border border-border shadow-sm space-y-6"
     >
+      {/* Honeypot: hidden from humans, filled by naive bots. Must stay empty. */}
+      <div aria-hidden="true" class="absolute left-[-9999px] w-px h-px overflow-hidden">
+        <label>
+          Website
+          <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        </label>
+      </div>
+
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label for="name" class="block text-sm font-medium text-primary mb-2">
@@ -73,25 +82,102 @@ const lang = getLangFromUrl(Astro.url);
         ></textarea>
       </div>
 
-      <Button variant="primary" size="lg" class="w-full">
+      <Button
+        id="contact-submit"
+        variant="primary"
+        size="lg"
+        class="w-full"
+        data-label-submit={t(lang, 'contact.submit')}
+        data-label-sending={t(lang, 'contact.sending')}
+      >
         {t(lang, 'contact.submit')}
       </Button>
 
       <div id="form-success" class="hidden text-center text-green-600 font-medium py-2">
         {t(lang, 'contact.success')}
       </div>
+      <div id="form-error" class="hidden text-center text-red-600 font-medium py-2">
+        {t(lang, 'contact.error')}
+      </div>
     </form>
   </div>
 </Section>
 
 <script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  form?.addEventListener('submit', (e) => {
+  const ENDPOINT = 'https://gesrxzncshkgacizddys.supabase.co/functions/v1/send_service_message';
+
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const submitBtn = document.getElementById('contact-submit') as HTMLButtonElement | null;
+  const successMsg = document.getElementById('form-success');
+  const errorMsg = document.getElementById('form-error');
+
+  const labelSubmit = submitBtn?.dataset.labelSubmit ?? 'Submit';
+  const labelSending = submitBtn?.dataset.labelSending ?? 'Sending...';
+
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    // TODO: Integrate with backend/email service
-    const successMsg = document.getElementById('form-success');
-    successMsg?.classList.remove('hidden');
-    form.reset();
-    setTimeout(() => successMsg?.classList.add('hidden'), 5000);
+
+    successMsg?.classList.add('hidden');
+    errorMsg?.classList.add('hidden');
+
+    const data = new FormData(form);
+    const name = String(data.get('name') ?? '').trim();
+    const email = String(data.get('email') ?? '').trim();
+    const company = String(data.get('company') ?? '').trim();
+    const message = String(data.get('message') ?? '').trim();
+    const website = String(data.get('website') ?? '').trim(); // honeypot
+
+    // Client-side bot checks — silently pretend success so bots can't learn why they failed.
+    const loadedAt = Number(form.dataset.loadedAt ?? '0');
+    const elapsedMs = Date.now() - loadedAt;
+    const looksLikeBot = website.length > 0 || elapsedMs < 2000;
+    if (looksLikeBot) {
+      successMsg?.classList.remove('hidden');
+      form.reset();
+      setTimeout(() => successMsg?.classList.add('hidden'), 8000);
+      return;
+    }
+
+    const lines = [
+      '🎯 New Demo Request — VRArena Loyalty',
+      '',
+      `Name: ${name}`,
+      `Email: ${email}`,
+    ];
+    if (company) lines.push(`Company: ${company}`);
+    lines.push('', 'Message:', message);
+    lines.push('', `Page: ${window.location.href}`);
+    const text = lines.join('\n');
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = labelSending;
+    }
+
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          text,
+          // Server-side guards — Edge Function should validate these:
+          website,      // honeypot: must be empty
+          elapsedMs,    // time-to-submit: reject if < 2000ms
+        }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      successMsg?.classList.remove('hidden');
+      form.reset();
+      setTimeout(() => successMsg?.classList.add('hidden'), 8000);
+    } catch (err) {
+      console.error('Demo request failed', err);
+      errorMsg?.classList.remove('hidden');
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = labelSubmit;
+      }
+    }
   });
 </script>

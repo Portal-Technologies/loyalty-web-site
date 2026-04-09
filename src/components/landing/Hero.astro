@@ -23,6 +23,9 @@ const lang = getLangFromUrl(Astro.url);
 
   <div class="relative max-w-(--container-max) mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 flex justify-end">
     <div class="max-w-2xl text-right">
+      <p class="inline-block mb-5 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-white/80 backdrop-blur-sm">
+        {t(lang, 'hero.eyebrow')}
+      </p>
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
         {t(lang, 'hero.title')}
       </h1>

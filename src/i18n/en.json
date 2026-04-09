@@ -8,9 +8,10 @@
     "demo": "Demo",
     "howItWorks": "How It Works",
     "blog": "Blog",
-    "contact": "Contacts"
+    "contact": "Contact"
   },
   "hero": {
+    "eyebrow": "Next-Gen Loyalty for LBE",
     "title": "Turn One-Time Visitors into Loyal Regulars",
     "subtitle": "Gamification-powered loyalty platform for VR arenas and LBE venues. Points, streaks, titles, and leaderboards — proven mechanics that drive repeat visits and grow your revenue.",
     "cta": "Request a Demo",
@@ -90,7 +91,9 @@
     "company": "Company / Venue",
     "message": "Message",
     "submit": "Request a Demo",
-    "success": "Thank you! We'll get back to you within 24 hours."
+    "sending": "Sending...",
+    "success": "Thank you! We'll get back to you within 24 hours.",
+    "error": "Something went wrong. Please try again or email us directly."
   },
   "footer": {
     "description": "VRArena Loyalty is a product of Portal Tech — gamification-powered loyalty solutions for VR and LBE businesses worldwide.",

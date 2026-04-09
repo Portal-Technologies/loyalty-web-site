@@ -29,7 +29,51 @@ const webAdminImages = Object.values(
     </p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <!-- Row 1: Web Admin (full width) -->
+  <div class="mb-12">
+    <div class="group">
+      <div class="carousel mx-auto" data-carousel>
+        <div class="overflow-hidden rounded-2xl border border-border group-hover:border-cta/50 transition-colors bg-bg-surface">
+          <div class="carousel-track flex transition-transform duration-300 ease-in-out">
+            {webAdminImages.map((img, i) => (
+              <div class="carousel-slide w-full flex-shrink-0 flex items-center justify-center cursor-zoom-in">
+                <Image
+                  src={img}
+                  alt={`Web Admin screenshot ${i + 1}`}
+                  class="w-full h-auto object-contain"
+                  widths={[640, 960, 1280, 1600]}
+                  sizes="(max-width: 1024px) 100vw, 1024px"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        {webAdminImages.length > 1 && (
+          <div class="flex items-center justify-center gap-3 mt-3">
+            <button class="carousel-prev w-7 h-7 rounded-full bg-bg-surface border border-border flex items-center justify-center text-text hover:bg-bg-muted transition-colors" aria-label="Previous">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <div class="carousel-dots flex gap-2">
+              {webAdminImages.map((_, i) => (
+                <button
+                  class:list={['w-2 h-2 rounded-full transition-colors', i === 0 ? 'bg-cta' : 'bg-border']}
+                  data-dot={i}
+                  aria-label={`Slide ${i + 1}`}
+                />
+              ))}
+            </div>
+            <button class="carousel-next w-7 h-7 rounded-full bg-bg-surface border border-border flex items-center justify-center text-text hover:bg-bg-muted transition-colors" aria-label="Next">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        )}
+      </div>
+      <p class="text-center mt-4 font-medium text-text">{t(lang, 'features.adminPanel.title')}</p>
+    </div>
+  </div>
+
+  <!-- Row 2: Mobile apps in 2 columns -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     <!-- Customer App -->
     <div class="group">
       <div class="carousel max-w-[280px] mx-auto" data-carousel>
@@ -110,47 +154,6 @@ const webAdminImages = Object.values(
         )}
       </div>
       <p class="text-center mt-4 font-medium text-text">{t(lang, 'features.operatorApp.title')}</p>
-    </div>
-
-    <!-- Web Admin -->
-    <div class="group">
-      <div class="carousel mx-auto" data-carousel>
-        <div class="overflow-hidden rounded-2xl border border-border group-hover:border-cta/50 transition-colors bg-bg-surface">
-          <div class="carousel-track flex transition-transform duration-300 ease-in-out">
-            {webAdminImages.map((img, i) => (
-              <div class="carousel-slide w-full flex-shrink-0 flex items-center justify-center cursor-zoom-in">
-                <Image
-                  src={img}
-                  alt={`Web Admin screenshot ${i + 1}`}
-                  class="w-full h-auto object-contain"
-                  widths={[400, 800]}
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-        {webAdminImages.length > 1 && (
-          <div class="flex items-center justify-center gap-3 mt-3">
-            <button class="carousel-prev w-7 h-7 rounded-full bg-bg-surface border border-border flex items-center justify-center text-text hover:bg-bg-muted transition-colors" aria-label="Previous">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-            </button>
-            <div class="carousel-dots flex gap-2">
-              {webAdminImages.map((_, i) => (
-                <button
-                  class:list={['w-2 h-2 rounded-full transition-colors', i === 0 ? 'bg-cta' : 'bg-border']}
-                  data-dot={i}
-                  aria-label={`Slide ${i + 1}`}
-                />
-              ))}
-            </div>
-            <button class="carousel-next w-7 h-7 rounded-full bg-bg-surface border border-border flex items-center justify-center text-text hover:bg-bg-muted transition-colors" aria-label="Next">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-            </button>
-          </div>
-        )}
-      </div>
-      <p class="text-center mt-4 font-medium text-text">{t(lang, 'features.adminPanel.title')}</p>
     </div>
   </div>
 </Section>

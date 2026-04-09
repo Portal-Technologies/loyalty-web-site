@@ -11,6 +11,7 @@
     "contact": "Kontakt"
   },
   "hero": {
+    "eyebrow": "Loyalty der nächsten Generation für LBE",
     "title": "Verwandeln Sie Einmalbesucher in treue Stammkunden",
     "subtitle": "Gamification-basierte Loyalty-Plattform für VR-Arenen und Unterhaltungszentren. Punkte, Streaks, Titel und Bestenlisten — bewährte Mechaniken für mehr Wiederholungsbesuche und Umsatz.",
     "cta": "Demo Anfragen",
@@ -90,7 +91,9 @@
     "company": "Unternehmen / Standort",
     "message": "Nachricht",
     "submit": "Demo anfragen",
-    "success": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden."
+    "sending": "Wird gesendet...",
+    "success": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt."
   },
   "footer": {
     "description": "VRArena Loyalty ist ein Produkt von Portal Tech — gamifizierte Loyalty-Lösungen für VR- und LBE-Unternehmen weltweit.",

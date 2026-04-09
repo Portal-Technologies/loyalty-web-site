@@ -11,6 +11,7 @@
     "contact": "Contato"
   },
   "hero": {
+    "eyebrow": "Fidelidade de Nova Geração para LBE",
     "title": "Transforme Visitantes Ocasionais em Clientes Fiéis",
     "subtitle": "Plataforma de fidelidade com gamificação para arenas VR e centros de entretenimento. Pontos, sequências, títulos e rankings — mecânicas comprovadas que impulsionam visitas repetidas e receita.",
     "cta": "Solicitar uma Demo",
@@ -90,7 +91,9 @@
     "company": "Empresa / Centro",
     "message": "Mensagem",
     "submit": "Solicitar Demo",
-    "success": "Obrigado! Entraremos em contato em até 24 horas."
+    "sending": "Enviando...",
+    "success": "Obrigado! Entraremos em contato em até 24 horas.",
+    "error": "Algo deu errado. Tente novamente ou nos escreva diretamente."
   },
   "footer": {
     "description": "VRArena Loyalty é um produto da Portal Tech — soluções de fidelidade com gamificação para negócios VR e LBE em todo o mundo.",
