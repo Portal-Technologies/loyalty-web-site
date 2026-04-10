@@ -1,0 +1,101 @@
+---
+import '../styles/global.css';
+
+// Standalone page — no Header/Footer, no [lang] routing.
+// Language detected on client via navigator.language.
+// SMS link lands here → auto-detect platform → redirect to store.
+// Fallback: show both buttons if detection fails or desktop.
+
+// TODO: replace with real store URLs after app publication
+const IOS_URL = '#'; // e.g. 'https://apps.apple.com/app/portal-vr/id...'
+const ANDROID_URL = '#'; // e.g. 'https://play.google.com/store/apps/details?id=com.portaltech.portalvr.loyaltyapp'
+const APPS_PUBLISHED = false; // flip to true when store URLs are live
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VR Arena — Download App</title>
+    <meta name="description" content="Download VR Arena loyalty app" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script is:inline define:vars={{ IOS_URL, ANDROID_URL, APPS_PUBLISHED }}>
+      var i18n = {
+        en: { subtitle: 'Download the VR Arena loyalty app', iosAlt: 'Download on the App Store', androidAlt: 'Get it on Google Play' },
+        ru: { subtitle: 'Скачайте приложение программы лояльности VR Arena', iosAlt: 'Загрузить в App Store', androidAlt: 'Доступно в Google Play' },
+        de: { subtitle: 'Laden Sie die VR Arena Treue-App herunter', iosAlt: 'Laden im App Store', androidAlt: 'Jetzt bei Google Play' },
+        es: { subtitle: 'Descarga la app de fidelización VR Arena', iosAlt: 'Descargar en App Store', androidAlt: 'Disponible en Google Play' },
+        pt: { subtitle: 'Baixe o app de fidelidade VR Arena', iosAlt: 'Baixar na App Store', androidAlt: 'Disponível no Google Play' },
+        zh: { subtitle: '下载 VR Arena 忠诚度应用', iosAlt: '在 App Store 下载', androidAlt: '在 Google Play 下载' },
+      };
+
+      (function () {
+        var lang = (navigator.language || '').slice(0, 2).toLowerCase();
+        if (!i18n[lang]) lang = 'en';
+        var t = i18n[lang];
+
+        document.documentElement.lang = lang;
+
+        var el;
+        el = document.getElementById('dl-subtitle');
+        if (el) el.textContent = t.subtitle;
+        el = document.getElementById('dl-ios-badge');
+        if (el) el.alt = t.iosAlt;
+        el = document.getElementById('dl-android-badge');
+        if (el) el.alt = t.androidAlt;
+
+        if (!APPS_PUBLISHED) return;
+        var ua = navigator.userAgent || navigator.vendor || '';
+        if (/iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+          window.location.replace(IOS_URL);
+        } else if (/android/i.test(ua)) {
+          window.location.replace(ANDROID_URL);
+        }
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col items-center justify-center bg-bg-base text-primary font-sans">
+    <div class="max-w-md w-full mx-auto px-6 py-12 text-center">
+      <!-- Logo -->
+      <div class="mb-8">
+        <img src="/favicon.svg" alt="VRArena" class="w-20 h-20 mx-auto rounded-2xl" />
+      </div>
+
+      <h1 class="text-2xl font-bold mb-3">VR Arena</h1>
+      <p id="dl-subtitle" class="text-text-muted mb-10 text-base leading-relaxed">
+        Download the VR Arena loyalty app
+      </p>
+
+      <div class="flex flex-col items-center gap-4">
+        <a href={IOS_URL} class="inline-block hover:opacity-80 transition-opacity">
+          <img
+            id="dl-ios-badge"
+            src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+            alt="Download on the App Store"
+            class="h-14"
+          />
+        </a>
+
+        <a href={ANDROID_URL} class="inline-block hover:opacity-80 transition-opacity">
+          <img
+            id="dl-android-badge"
+            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+            alt="Get it on Google Play"
+            class="h-[68px]"
+          />
+        </a>
+      </div>
+      <p class="text-text-dim text-xs mt-10">&copy; 2026 VR Arena</p>
+    </div>
+  </body>
+</html>
