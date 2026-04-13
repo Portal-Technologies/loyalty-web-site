@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "VRArena Loyalty — Gamified Loyalty Platform for VR & LBE Business",
-    "description": "Turn one-time visitors into loyal regulars. Gamification-powered loyalty system with mobile apps, operator tools, and analytics — proven to increase visit frequency by 2.5x."
+    "title": "VRArena Loyalty — Loyalty, Tournaments & Retention for VR Clubs",
+    "description": "Automate cashback, run tournaments, motivate your staff, and retain more customers. The loyalty platform built for VR clubs and LBE venues — localized for every market."
   },
   "nav": {
     "features": "Features",
@@ -12,11 +12,11 @@
     "download": "Download"
   },
   "hero": {
-    "eyebrow": "Next-Gen Loyalty for LBE",
-    "title": "Turn One-Time Visitors into Loyal Regulars",
-    "subtitle": "Gamification-powered loyalty platform for VR arenas and LBE venues. Points, streaks, titles, and leaderboards — proven mechanics that drive repeat visits and grow your revenue.",
+    "eyebrow": "Built for VR Club Owners",
+    "title": "Loyalty That Pays for Itself — Without Adding Work",
+    "subtitle": "Automate cashback and promo codes. Run tournaments that bring adult players back. Motivate your staff with operator leaderboards. One platform, localized for every market.",
     "cta": "Request a Demo",
-    "ctaSecondary": "See How It Works"
+    "ctaSecondary": "See What It Solves"
   },
   "metrics": {
     "sectionTitle": "Proven Results from the LBE Industry",
@@ -44,18 +44,46 @@
   },
   "features": {
     "sectionTitle": "Complete Loyalty Ecosystem",
-    "sectionSubtitle": "Everything your VR venue needs to build lasting customer relationships and drive repeat business.",
+    "sectionSubtitle": "Everything your VR club needs to automate loyalty, run tournaments, and retain more customers.",
     "customerApp": {
       "title": "Customer Mobile App",
-      "description": "Mobile app with points, streak rewards, achievement titles, gamified surveys, and personalized offers — mechanics that keep customers coming back."
+      "description": "Auto-cashback, WhatsApp promo codes, tournaments, and a points wallet your customers actually use. Phone-number login — no passwords, no friction."
     },
     "operatorApp": {
       "title": "Operator App",
-      "description": "Simple tablet app for your staff to scan QR codes, manage check-ins, apply rewards, and serve customers faster — no training needed."
+      "description": "Staff scan QR codes and apply rewards in seconds. Built-in operator leaderboards reward your team for every customer they invite and retain."
     },
     "adminPanel": {
       "title": "Web Admin Panel",
-      "description": "Full analytics dashboard — customer segments, campaign management, reward rules, visit patterns, and multi-location control from a single interface."
+      "description": "Analytics on visits, spend, and retention. Manage campaigns, tournaments, and multi-location performance from a single dashboard."
+    }
+  },
+  "pains": {
+    "sectionTitle": "Built for the Real Pains of VR Club Owners",
+    "sectionSubtitle": "Every feature comes from real conversations with owners running VR clubs in Russia, Latin America, and Europe. Here's what we actually solve.",
+    "automation": {
+      "title": "Zero Manual Data Entry",
+      "description": "Cashback, promo codes, and reward points are credited automatically. Your staff stops tracking spreadsheets and starts serving customers."
+    },
+    "tournaments": {
+      "title": "Tournaments That Retain Adults",
+      "description": "In-app registration, brackets, player rankings, and team finder. Tournaments are the #1 retention driver for the adult segment — and they build community around your venue."
+    },
+    "staffMotivation": {
+      "title": "Motivate Your Floor Staff",
+      "description": "Operator leaderboards reward the people on your floor for every customer they invite, register, and bring back. Monthly rankings drive real engagement."
+    },
+    "families": {
+      "title": "Family-First Segmentation",
+      "description": "Link kids' profiles to parents, track birthdays, and send targeted offers. Kids' birthdays are the core of every VR venue — we built the app around that."
+    },
+    "whatsapp": {
+      "title": "WhatsApp-First Communication",
+      "description": "Phone-number login, promo codes delivered via WhatsApp or SMS, and push notifications for tournaments and deals. Built for markets where WhatsApp is the channel."
+    },
+    "localization": {
+      "title": "Localized for Your Market",
+      "description": "Six languages, multi-region backend, and integration-ready for local payment methods (ModoCard, PIX, cash). Legal requirements handled per country — CPF in Brazil, club rules in Argentina."
     }
   },
   "demo": {

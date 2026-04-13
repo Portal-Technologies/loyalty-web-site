@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "VRArena Loyalty — Plataforma de Fidelización Gamificada para Negocios VR y LBE",
-    "description": "Convierte visitantes ocasionales en clientes habituales. Sistema de fidelización con gamificación, apps móviles, herramientas para operadores y analíticas — aumenta la frecuencia de visitas 2.5x."
+    "title": "VRArena Loyalty — Fidelización, Torneos y Retención para Clubes VR",
+    "description": "Automatiza el cashback, organiza torneos, motiva a tu equipo y retiene más clientes. La plataforma de fidelización para clubes VR y centros LBE — localizada para cada mercado."
   },
   "nav": {
     "features": "Funcionalidades",
@@ -12,11 +12,11 @@
     "download": "Descargar"
   },
   "hero": {
-    "eyebrow": "Fidelización de Nueva Generación para LBE",
-    "title": "Convierte Visitantes Ocasionales en Clientes Habituales",
-    "subtitle": "Plataforma de fidelización con gamificación para arenas VR y centros de entretenimiento. Puntos, rachas, títulos y tablas de clasificación — mecánicas probadas que impulsan visitas repetidas e ingresos.",
+    "eyebrow": "Hecho para Dueños de Clubes VR",
+    "title": "Fidelización que se Paga Sola — Sin Añadir Trabajo",
+    "subtitle": "Automatiza el cashback y los códigos promocionales. Organiza torneos que fidelizan a tu audiencia adulta. Motiva a tu equipo con rankings de operadores. Una plataforma, localizada para cada mercado.",
     "cta": "Solicitar una Demo",
-    "ctaSecondary": "Cómo Funciona"
+    "ctaSecondary": "Qué Problemas Resuelve"
   },
   "metrics": {
     "sectionTitle": "Resultados Probados de la Industria LBE",
@@ -44,18 +44,46 @@
   },
   "features": {
     "sectionTitle": "Ecosistema Completo de Fidelización",
-    "sectionSubtitle": "Todo lo que tu centro VR necesita para construir relaciones duraderas y aumentar las visitas repetidas.",
+    "sectionSubtitle": "Todo lo que tu club VR necesita para automatizar la fidelización, organizar torneos y retener más clientes.",
     "customerApp": {
       "title": "App Móvil del Cliente",
-      "description": "App móvil con puntos, recompensas por rachas, títulos de logros, encuestas gamificadas y ofertas personalizadas — mecánicas que hacen volver a los clientes."
+      "description": "Cashback automático, códigos promocionales por WhatsApp, torneos y una billetera de puntos que tus clientes realmente usan. Acceso por número de teléfono — sin contraseñas, sin fricción."
     },
     "operatorApp": {
       "title": "App del Operador",
-      "description": "App sencilla para tablet — escaneo de códigos QR, gestión de visitas, aplicación de recompensas y atención rápida sin necesidad de formación."
+      "description": "El personal escanea códigos QR y aplica recompensas en segundos. Los rankings integrados recompensan a tu equipo por cada cliente que invitan y fidelizan."
     },
     "adminPanel": {
       "title": "Panel de Administración Web",
-      "description": "Panel analítico completo — segmentos de clientes, gestión de campañas, reglas de recompensas, patrones de visitas y control multi-sede desde una interfaz."
+      "description": "Analítica de visitas, ingresos y retención. Gestiona campañas, torneos y el rendimiento de múltiples locales desde un solo panel."
+    }
+  },
+  "pains": {
+    "sectionTitle": "Hecho para los Problemas Reales de los Dueños de Clubes VR",
+    "sectionSubtitle": "Cada función nace de entrevistas reales con dueños de clubes VR en Rusia, América Latina y Europa. Esto es lo que realmente resolvemos.",
+    "automation": {
+      "title": "Cero Trabajo Manual",
+      "description": "El cashback, los códigos promocionales y los puntos se acreditan automáticamente. Tu personal deja de llevar planillas y vuelve a atender clientes."
+    },
+    "tournaments": {
+      "title": "Torneos que Fidelizan Adultos",
+      "description": "Inscripción en la app, llaves de torneo, rankings de jugadores y buscador de equipos. Los torneos son el driver N.º 1 para retener al público adulto — y construyen comunidad alrededor de tu local."
+    },
+    "staffMotivation": {
+      "title": "Motiva a tu Equipo",
+      "description": "Los rankings de operadores recompensan al personal de sala por cada cliente que invitan, registran y hacen volver. Rankings mensuales, compromiso real."
+    },
+    "families": {
+      "title": "Segmentación Centrada en la Familia",
+      "description": "Vincula los perfiles de los niños con los padres, rastrea cumpleaños y envía ofertas dirigidas. Los cumpleaños infantiles son el corazón de todo club VR — y la app está construida alrededor de eso."
+    },
+    "whatsapp": {
+      "title": "Comunicación por WhatsApp",
+      "description": "Acceso por teléfono, códigos promocionales por WhatsApp o SMS, notificaciones push para torneos y promociones. Pensado para mercados donde WhatsApp es el canal principal."
+    },
+    "localization": {
+      "title": "Localizado para tu Mercado",
+      "description": "Seis idiomas, backend multi-región e integración lista para métodos de pago locales (ModoCard, PIX, efectivo). Requisitos legales por país — CPF en Brasil, reglas del club en Argentina."
     }
   },
   "demo": {
