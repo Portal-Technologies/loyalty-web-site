@@ -17,26 +17,26 @@ const lang = getLangFromUrl(Astro.url);
     sizes="100vw"
     loading="eager"
   />
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-bg-dark/70"></div>
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(155,81,224,0.25),transparent_50%)]"></div>
+  <!-- Overlay: strong on left, fades to transparent on right -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(10,10,10,0.95)_0%,rgba(10,10,10,0.85)_30%,rgba(10,10,10,0.4)_60%,rgba(10,10,10,0)_100%)]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(6,147,227,0.15),transparent_60%)]"></div>
 
-  <div class="relative max-w-(--container-max) mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 flex justify-end">
-    <div class="max-w-2xl text-right">
+  <div class="relative px-8 sm:px-12 lg:px-16 xl:px-24 py-24 sm:py-32 lg:py-40 flex justify-start">
+    <div class="max-w-xl text-left">
       <p class="inline-block mb-5 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-white/80 backdrop-blur-sm">
         {t(lang, 'hero.eyebrow')}
       </p>
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
         {t(lang, 'hero.title')}
       </h1>
-      <p class="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
+      <p class="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed">
         {t(lang, 'hero.subtitle')}
       </p>
-      <div class="mt-10 flex flex-wrap gap-4 justify-end">
+      <div class="mt-10 flex flex-wrap gap-4 justify-start">
         <Button href="#contact" variant="primary" size="lg">
           {t(lang, 'hero.cta')}
         </Button>
-        <Button href="#features" variant="outline" size="lg" class="border-white/30 text-white hover:bg-white/10 hover:text-white">
+        <Button href="#pains" variant="outline" size="lg" class="border-white/30 text-white hover:bg-white/10 hover:text-white">
           {t(lang, 'hero.ctaSecondary')}
         </Button>
       </div>
